@@ -13,9 +13,13 @@ def sum_pairs(ints, s):
 			needed_nums.add(s - num)
 
 
+def test_case_1():
+	assert sum_pairs([2, 13, 12, 4, 3, 6, 7, 3, 1, 1], 10) == [4, 6]
 
-sum_pairs([2, 13, 12, 4, 3, 6, 7, 3, 1, 1], 10)
 
-sum_pairs([10, 5, 2, 3, 7, 5], 10)
+def test_case_2():
+	assert sum_pairs([10, 5, 2, 3, 7, 5], 10) == [3, 7]
 
-sum_pairs([1, 2, 3, 4, 1, 0], 2)
+
+def test_case_3():
+	assert sum_pairs([1, 2, 3, 4, 1, 0], 2) == [1, 1]
