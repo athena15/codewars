@@ -5,11 +5,14 @@ class Solution:
         possible_cakes = []
         for ingredient, quantity in recipe.items():
             possible_cakes.append(available.get(ingredient, 0) // quantity)
-            
+
         return min(possible_cakes)
 
-        # alternatively, use a concise list comprehension with:
-        # return min([available.get(ingredient, 0) // quantity for ingredient, quantity in recipe.items()])
+
+# alternatively, use a concise list comprehension with:
+class Solution_2:
+    def cakes(self, recipe, available):
+        return min([available.get(ingredient, 0) // quantity for ingredient, quantity in recipe.items()])
 
 
 if __name__ == '__main__':
