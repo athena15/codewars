@@ -19,9 +19,10 @@ class Solution:
                 indices.append(ix)
 
         print(indices)
+        order = (' ').join([str(x) for _, x in sorted(zip(indices, t))])
 
-        return (' ').join([str(x) for _, x in sorted(zip(indices, t))])
+        # return (' ').join([str(x) for _, x in sorted(zip(indices, t))])
 
 
 solution = Solution()
-# solution.order_weight('5 6 12 66')
+solution.order_weight('5 6 12 66 30')

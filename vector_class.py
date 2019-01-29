@@ -4,6 +4,17 @@ class Vector:
 
     def __init__(self, points):
         self.points = points
+        # etc, etc.
+
+        if type(points) is not type(list):
+            raise ValueError('Not a list')
+
+    def check_valid_vectors(self, other=None):
+        assert type(self) == Vector
+
+        if other is not None:
+            if not len(self) == len(other):
+                raise ValueError('Length of vectors does not match.')
 
     def __str__(self):
         x = []
@@ -38,7 +49,7 @@ class Vector:
         return self.points == other.points
 
 
-vector1 = Vector([1, 2, 3])
-vector2 = Vector([10, 20, 30])
-
-print(str(vector2))
+if __name__ == '__main__':
+    vector1 = Vector([1, 2, 3])
+    vector2 = Vector([10, 20, 30])
+    vector1.add(vector2)
